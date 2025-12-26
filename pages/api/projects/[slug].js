@@ -1,6 +1,6 @@
 // pages/api/projects/[slug].js
 
-import { getProjectBySlug } from '../../../../lib/data';
+import { getProjectBySlug } from '../../../lib/data';
 
 export default async function handler(req, res) {
   const { slug } = req.query;
