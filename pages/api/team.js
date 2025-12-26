@@ -1,6 +1,7 @@
 // pages/api/team.js
 
-import { getAllTeamMembers } from '../../lib/data';
+// Corrected path: goes up two levels from 'api/' to the root
+import { getTeamMembers } from '../../lib/data';
 
 export default async function handler(req, res) {
   // Only allow GET requests
@@ -10,7 +11,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    const members = await getAllTeamMembers();
+    // Corrected function name
+    const members = await getTeamMembers();
     res.status(200).json(members);
   } catch (error) {
     console.error('API Error fetching team members:', error);
