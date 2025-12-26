@@ -3,7 +3,7 @@
 // These imports allow us to use client-side features like useEffect and useState
 // to fetch data from our own API.
 import React from "react";
-import { useEffect, useState } from React;
+import { useEffect, useState } from 'react';
 
 // A simple component to display a single project card
 function ProjectCard({ project }) {
