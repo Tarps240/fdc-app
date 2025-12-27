@@ -16,6 +16,6 @@ export default async function handler(req, res) {
     res.status(200).json(members);
   } catch (error) {
     console.error('API Error fetching team members:', error);
-    res.status(500).json({ message: 'Failed to fetch team members' });
+    res.status(500).json({ message: 'Failed to fetch team members (V2)' });
   }
 }
