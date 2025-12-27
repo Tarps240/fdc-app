@@ -4,6 +4,7 @@
 // to fetch data from our own API.
 import React from "react";
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 // A simple component to display a single project card
 function ProjectCard({ project }) {
@@ -12,7 +13,10 @@ function ProjectCard({ project }) {
       <img src={project.imageUrl} alt={project.title} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
       <h3>{project.title}</h3>
       <p>{project.description}</p>
-      <a href={`/projects/${project.slug}`}>View Project</a>
+      {/* Change this line to use Next.js Link */}
+      <Link href={`/projects/${project.slug}`}>
+        View Project
+      </Link>
     </div>
   );
 }
